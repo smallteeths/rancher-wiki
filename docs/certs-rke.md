@@ -14,7 +14,7 @@ Rancher 支持三种 TLS 证书来源：
 
 - 集群中已安装并启用 cert-manager
 
-  ![](/image/cert-manager.png)
+  ![](./image/cert-manager.png)
 
 # Rancher 默认 CA 证书生成与分发
 
@@ -26,7 +26,7 @@ Rancher 支持三种 TLS 证书来源：
     [Rancher Server 启动时加载 tls-rancher Secret](https://github.com/cnrancher/pandaria/blob/3d329eb9de7876f82dc3968a396468798a8fe051/pkg/tls/tls.go#L69)  
     [Rancher Server  创建 tls-rancher Secret](https://github.com/rancher/rancher/blob/8bf56b046af7879386aa5928f50eee678f84b057/pkg/tls/tls.go#L205)
 
-    ![](/image/rancher-tls.png)
+    ![](./image/rancher-tls.png)
 
 2. **Rancher Server 启动带 TLS 的服务**  
    使用上述 CA 和私钥为 Rancher Server 创建 TLS 服务。调用代码位置如下：
@@ -38,7 +38,7 @@ Rancher 支持三种 TLS 证书来源：
 
     [Rancher Server 存储 CACerts 到 Settings 资源里](https://github.com/rancher/rancher/blob/8bf56b046af7879386aa5928f50eee678f84b057/pkg/tls/tls.go#L209)
 
-    ![](/image/setting.png)
+    ![](./image/setting.png)
 
 ## Rancher Agent
 
@@ -47,7 +47,7 @@ Rancher 支持三种 TLS 证书来源：
 
     [查看 Agent 获取 CA](https://github.com/cnrancher/pandaria/blob/3d329eb9de7876f82dc3968a396468798a8fe051/package/run.sh#L227)
 
-    ![](/image/agent.png)
+    ![](./image/agent.png)
 
 - **Agent 使用 `/etc/kubernetes/ssl/certs/serverca` CA 建立与 Rancher server 的链接** ，代码如下：
   

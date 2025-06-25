@@ -22,13 +22,13 @@ KEv2 本质上是运行于 Kubernetes 的 Controller（ack-operator 或 cce-oper
 
     * Rancher Server 的管理层 Controller（`ack_cluster_handler.go`）监听 Mgmt Cluster 对象
     * 当检测到 `spec.ackConfig` 被设置时，即自动创建或更新命名空间 `cattle-system 下的 `ackclusterconfigs.ack.pandaria.io` 对象
-        [查看源码 ↗](https://github.com/cnrancher/pandaria/blob/release/v2.9/pkg/controllers/management/ack/ack_cluster_handler.go#L91)
+        [查看源码](https://github.com/cnrancher/pandaria/blob/release/v2.11-ent/pkg/controllers/management/ack/ack_cluster_handler.go#L91)
 
 3. **部署 ack-operator/cce-operator 到目标集群**
 
     * Rancher Server 的另一个 Controller（`hostedcluster/controller.go`）同样监听 Mgmt Cluster
     * 它会调用 Pandaria-Catalog 中的 `rancher-ack-operator` Chart，在目标集群中安装相应的 Operator
-        [查看源码 ↗](https://github.com/cnrancher/pandaria/blob/release/v2.9/pkg/controllers/dashboard/hostedcluster/controller.go#L90)
+        [查看源码](https://github.com/cnrancher/pandaria/blob/release/v2.11-ent/pkg/controllers/dashboard/hostedcluster/controller.go#L90)
         ![](./image/ack-operator.png)
 
 ## KEv2 ACK/CCE 最小权限请产考

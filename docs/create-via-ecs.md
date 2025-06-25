@@ -42,7 +42,7 @@ Rancher 创建 ECS Node driver 请产考[文档](https://ee.docs.rancher.cn/docs
 
 注意事项：请确保网络／防火墙策略允许访问所有 aliyuncs.com 域名的子域（即 *.aliyuncs.com），例如 vpc.cn-shanghai.aliyuncs.com、ecs.cn-hangzhou.aliyuncs.com 等
 
-## 创建 Rancher 端口访问要求
+## 安全组端口访问要求
 
 下面是各端口的用途说明：
 

@@ -6,6 +6,5 @@ theme:
     - navigation.tabs
 nav:
   - 证书: certs-rke.md
-  - 普通导入 ACK/CCE: import-normal.md
-  - KEv2 ACK/CCE: import-advanced.md
+  - ACK/CCE 集群: import-advanced.md
   - Aliyun Node Driver: create-via-ecs.md
